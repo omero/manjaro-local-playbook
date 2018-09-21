@@ -1,0 +1,31 @@
+---
+- name: Run the equivalent of "pacman -Syu" as a separate step
+  pacman:
+    update_cache: yes
+    upgrade: yes
+
+- name: Remove unnecessary pacman dependencies (manjaro)
+  pacman:
+    name: "{{ item }}"
+    state: absent
+    force: yes
+  with_items: "{{ manjaro_remove_pacman_packages }}"
+
+- name: Install pacman dependencies
+  pacman:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ pacman_packages }}"
+
+- name: Download and install Ahoy 
+  get_url:
+    url: "https://github.com/ahoy-cli/ahoy/releases/download/{{ ahoy_version }}/ahoy-bin-linux-amd64"
+    dest: /usr/local/bin/ahoy
+    group: "{{ ansible_user }}"
+    owner: "{{ ansible_user }}"
+    mode: a+x
+
+- name: Install yaourt dependencies
+  become: false
+  command: yaourt -S {{ item }} --needed --noconfirm
+  with_items: "{{ yaourt_packages }}"

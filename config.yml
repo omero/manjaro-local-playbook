@@ -1,0 +1,37 @@
+---
+configure_dotfiles: yes
+ahoy_version: 2.0.0
+user_home_directory: "{{ lookup('env','HOME') }}"
+
+manjaro_remove_pacman_packages:
+  - xterm
+  - xfburn
+  - gnumeric
+  - chromium
+  - sylpheed
+  - smplayer
+  - termite
+
+pacman_packages:
+  - zsh
+  - yaourt
+  - terminator
+  - vim
+  - docker
+  - docker-compose
+  - bat
+  - tree
+  - virtualbox
+  - linux414-virtualbox-host-modules
+  - linux414-virtualbox-guest-modules
+  - vagrant
+  - nodejs-lts-carbon
+
+yaourt_packages:
+  - ttf-mac-fonts
+  - system-san-francisco-font-git
+  - ttf-hack-powerline-git
+  - fontconfig-infinality-ultimate
+  - google-chrome
+#  - spotify-stable
+  - wavebox-bin

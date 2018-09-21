@@ -1,0 +1,15 @@
+---
+- hosts: localhost
+  become: true
+  user: omers
+  gather_facts: yes
+
+  vars_files:
+    - config.yml
+
+  roles:
+    - role: ./roles/system
+      tags: ['system']
+      
+    - role: ./roles/dotfiles
+      tags: ['dotfiles']

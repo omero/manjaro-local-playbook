@@ -1,0 +1,21 @@
+---    
+- name: Copy Dotfiles configs into place.
+  become: false
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ user_home_directory }}/.config"
+  with_items:
+    - src: templates/config/terminator
+    - src: templates/config/dunst
+    - src: templates/config/conky
+
+- name: Copy Dotfiles into place.
+  become: false
+  copy:
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+  with_items:
+    - src: "templates/git/gitconfig"
+      dest: "{{ user_home_directory }}/.gitconfig"
+    - src: "templates/git/gitignore"
+      dest: "{{ user_home_directory }}/.gitignore"
