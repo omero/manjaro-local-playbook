@@ -10,6 +10,3 @@
   roles:
     - role: ./roles/system
       tags: ['system']
-      
-    - role: ./roles/dotfiles
-      tags: ['dotfiles']

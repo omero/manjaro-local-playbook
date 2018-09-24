@@ -14,6 +14,7 @@ manjaro_remove_pacman_packages:
 
 pacman_packages:
   - zsh
+  - zsh-autosuggestions
   - yaourt
   - terminator
   - vim
@@ -26,12 +27,17 @@ pacman_packages:
   - linux414-virtualbox-guest-modules
   - vagrant
   - nodejs-lts-carbon
+  - arc-gtk-theme
+  
 
 yaourt_packages:
   - ttf-mac-fonts
   - system-san-francisco-font-git
   - ttf-hack-powerline-git
-  - fontconfig-infinality-ultimate
+  - la-capitaine-icon-theme
+  - capitaine-cursors
+#  - fontconfig-infinality-ultimate
   - google-chrome
 #  - spotify-stable
   - wavebox-bin
+  - visual-studio-code-bin
