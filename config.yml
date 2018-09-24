@@ -4,15 +4,14 @@ ahoy_version: 2.0.0
 user_home_directory: "{{ lookup('env','HOME') }}"
 
 manjaro_remove_pacman_packages:
-  - xterm
   - xfburn
   - gnumeric
   - chromium
   - sylpheed
   - smplayer
-  - termite
 
 pacman_packages:
+  - gcc
   - zsh
   - zsh-autosuggestions
   - yaourt
@@ -28,7 +27,6 @@ pacman_packages:
   - vagrant
   - nodejs-lts-carbon
   - arc-gtk-theme
-  
 
 yaourt_packages:
   - ttf-mac-fonts
