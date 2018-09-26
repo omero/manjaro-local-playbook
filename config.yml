@@ -24,9 +24,10 @@ pacman_packages:
   - virtualbox
   - linux414-virtualbox-host-modules
   - linux414-virtualbox-guest-modules
-  - vagrant
   - nodejs-lts-carbon
   - arc-gtk-theme
+  - vagrant
+  - terraform
 
 yaourt_packages:
   - ttf-mac-fonts
