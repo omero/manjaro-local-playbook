@@ -21,13 +21,19 @@ pacman_packages:
   - docker-compose
   - bat
   - tree
+  - nodejs-lts-carbon
+  # virtualbox for vagrant 
   - virtualbox
   - linux414-virtualbox-host-modules
   - linux414-virtualbox-guest-modules
-  - nodejs-lts-carbon
-  - arc-gtk-theme
   - vagrant
   - terraform
+  # personalization and themes 
+  - arc-gtk-theme
+  # polybar and dependencies
+  - polybar
+  - jsoncpp
+  - libmpdclient
 
 yaourt_packages:
   - ttf-mac-fonts
