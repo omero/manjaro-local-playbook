@@ -25,6 +25,20 @@
     owner: "{{ ansible_user }}"
     mode: a+x
 
+- name: Download and install Spotifycli
+  get_url:
+    url: "https://raw.githubusercontent.com/pwittchen/spotify-cli-linux/master/spotifycli/spotifycli.py"
+    dest: /usr/local/bin/spotifycli
+    group: "{{ ansible_user }}"
+    owner: "{{ ansible_user }}"
+    mode: a+x
+
+- name: adding existing user {{ ansible_user }} to group sudo
+  user:
+    name: '{{ ansible_user }}'
+    groups: docker
+    append: yes
+
 - name: Install yaourt dependencies
   become: false
   command: yaourt -S {{ item }} --needed --noconfirm

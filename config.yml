@@ -9,7 +9,9 @@ manjaro_remove_pacman_packages:
   - chromium
   - sylpheed
   - smplayer
-
+  
+  
+  
 pacman_packages:
   - gcc
   - zsh
@@ -30,19 +32,43 @@ pacman_packages:
   - terraform
   # personalization and themes 
   - arc-gtk-theme
+  - ttf-material-icons 
   # polybar and dependencies
   - polybar
+  - python-dbus
+  - playerctl
   - jsoncpp
   - libmpdclient
+  # App launcher
+  - rofi
+  # Bluetooth
+  - bluez
+  - bluez-libs
+  - bluez-utils
+  - blueman
+  #Audio
+  - pulseaudio
+  - paprefs
+  - pulseaudio-alsa
+  - pulseaudio-bluetooth
+  - pavucontrol
 
 yaourt_packages:
+  # fonts and personalization
   - ttf-mac-fonts
   - system-san-francisco-font-git
   - ttf-hack-powerline-git
+  - siji-git
+  - ttf-font-awesome-4
   - la-capitaine-icon-theme
   - capitaine-cursors
+  #you need install this manually
 #  - fontconfig-infinality-ultimate
   - google-chrome
-#  - spotify-stable
+  # you need install this manually
+#  - spotify
   - wavebox-bin
   - visual-studio-code-bin
+  - direnv
+  - kubernetes-helm
+  - pa-applet-git
