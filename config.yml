@@ -9,9 +9,7 @@ manjaro_remove_pacman_packages:
   - chromium
   - sylpheed
   - smplayer
-  
-  
-  
+
 pacman_packages:
   - gcc
   - zsh
@@ -32,7 +30,9 @@ pacman_packages:
   - terraform
   # personalization and themes 
   - arc-gtk-theme
-  - ttf-material-icons 
+  - moka-icon-theme
+  - arc-icon-theme
+  - ttf-material-icons
   # polybar and dependencies
   - polybar
   - python-dbus
@@ -60,13 +60,11 @@ yaourt_packages:
   - ttf-hack-powerline-git
   - siji-git
   - ttf-font-awesome-4
-  - la-capitaine-icon-theme
   - capitaine-cursors
   #you need install this manually
 #  - fontconfig-infinality-ultimate
   - google-chrome
-  # you need install this manually
-#  - spotify
+  - spotify
   - wavebox-bin
   - visual-studio-code-bin
   - direnv
