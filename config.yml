@@ -69,4 +69,5 @@ yaourt_packages:
   - visual-studio-code-bin
   - direnv
   - kubernetes-helm
+  - minikube
   - pa-applet-git
