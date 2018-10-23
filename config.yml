@@ -16,18 +16,25 @@ pacman_packages:
   - zsh-autosuggestions
   - yaourt
   - terminator
+  - tilix
   - vim
   - docker
   - docker-compose
   - bat
   - tree
   - nodejs-lts-carbon
+  - npm
+  - unzip
   # virtualbox for vagrant 
   - virtualbox
   - linux414-virtualbox-host-modules
   - linux414-virtualbox-guest-modules
   - vagrant
   - terraform
+  - packer
+  - python-pip
+  - php
+  - composer
   # personalization and themes 
   - arc-gtk-theme
   - moka-icon-theme
@@ -70,4 +77,5 @@ yaourt_packages:
   - direnv
   - kubernetes-helm
   - minikube
-  - pa-applet-git
+  - pa-applet
+  - alttab-git

@@ -36,7 +36,7 @@
 - name: adding existing user {{ ansible_user }} to group sudo
   user:
     name: '{{ ansible_user }}'
-    groups: docker
+    groups: docker, audio
     append: yes
 
 - name: Install yaourt dependencies
