@@ -35,6 +35,7 @@ pacman_packages:
   - python-pip
   - php
   - composer
+  - mariadb
   # personalization and themes 
   - arc-gtk-theme
   - moka-icon-theme
