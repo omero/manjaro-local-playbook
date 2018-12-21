@@ -25,6 +25,7 @@ pacman_packages:
   - nodejs-lts-carbon
   - npm
   - unzip
+  - sshpass
   # virtualbox for vagrant 
   - virtualbox
   - linux414-virtualbox-host-modules
@@ -79,4 +80,3 @@ yaourt_packages:
   - kubernetes-helm
   - minikube
   - pa-applet
-  - alttab-git
