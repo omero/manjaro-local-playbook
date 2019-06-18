@@ -1,0 +1,15 @@
+---
+- name: Install docker
+  pacman: name=docker state=present
+
+- name: Install docker-compose
+  pacman: name=docker-compose state=present
+
+- name: Create system docker group
+  group: name=docker state=present
+
+- name: Enable and start Docker demon
+  service:
+    name: docker.service
+    enabled: yes
+    state: started

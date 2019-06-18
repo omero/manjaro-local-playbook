@@ -1,12 +1,23 @@
 ---
 - hosts: localhost
   become: true
-  user: omers
-  gather_facts: yes
+  # user: omers
+  # gather_facts: yes
 
-  vars_files:
-    - config.yml
-
+  # vars_files:
+  #   - config.yml
+  
   roles:
-    - role: ./roles/system
-      tags: ['system']
+  - { role: base, tags: ['base'] }
+  - { role: ahoy, tags: ['ahoy'] }
+  - { role: docker, tags: ['docker'] }
+  - { role: hashicorp, tags: ['hashicorp'] }
+  - { role: bluetooth, tags: ['bluetooth'] }
+  - { role: sound, tags: ['sound'] }
+
+    # - role: ./roles/system
+    #   tags: ['system']
+
+  vars_prompt:
+    - name: user_password
+      prompt: "Enter desired user password"

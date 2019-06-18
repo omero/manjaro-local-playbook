@@ -1,0 +1,36 @@
+user:
+  name: omers
+  uid: 1000
+  group: omers
+  shell: /usr/bin/zsh
+  email:  omersguchigu@gmail.com
+
+base_packages:
+  - base-devel
+  - git
+  - rsync
+  - ranger
+  - jq
+  - vim
+  - bat
+  - tree
+  - nodejs-lts-carbon
+  - npm
+  - unzip
+  - arc-gtk-theme
+  - arc-icon-theme
+  - firefox
+aur:
+  dir: aur
+  packages:
+    - yay
+    - direnv
+    - nerd-fonts-source-code-pro
+    - ttf-nerd-fonts-hack-complete-git
+    - zoom
+
+passwordless_sudo:
+  - ALL
+
+bluetooth:
+  disable: False

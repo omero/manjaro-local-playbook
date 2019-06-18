@@ -1,0 +1,8 @@
+---
+- name: Download and install Ahoy 
+  get_url:
+    url: "https://github.com/ahoy-cli/ahoy/releases/download/2.0.0/ahoy-bin-linux-amd64"
+    dest: /usr/local/bin/ahoy
+    group: "{{ user.group }}"
+    owner: "{{ user.name }}"
+    mode: a+x

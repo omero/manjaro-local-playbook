@@ -1,0 +1,25 @@
+---
+- name: Install universal base packages
+  pacman:
+    name: "{{ base_packages }}"
+    state: present
+  tags:
+    - packages
+
+- name: Use all cores when compressing packages
+  lineinfile:
+    dest: /etc/makepkg.conf
+    regexp: "^COMPRESSXZ"
+    line: "COMPRESSXZ=(xz -c -z - --threads=0)"
+
+- name: Install AUR base packages
+  aur:
+    name: "{{ aur.packages }}"
+    user: "{{ user.name }}"
+  tags:
+    - aur
+    - packages
+
+- include: shell.yml
+- include: user.yml
+- include: sudo.yml
