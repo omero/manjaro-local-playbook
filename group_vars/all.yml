@@ -19,7 +19,6 @@ base_packages:
   - unzip
   - arc-gtk-theme
   - arc-icon-theme
-  - firefox
 aur:
   dir: aur
   packages:

@@ -13,3 +13,9 @@
     name: docker.service
     enabled: yes
     state: started
+
+- name: assing docker group to user
+  user:
+    name: "{{ user.name }}"
+    groups: docker
+    append: yes

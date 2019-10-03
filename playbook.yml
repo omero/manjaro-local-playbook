@@ -1,22 +1,14 @@
 ---
 - hosts: localhost
   become: true
-  # user: omers
-  # gather_facts: yes
-
-  # vars_files:
-  #   - config.yml
   
   roles:
   - { role: base, tags: ['base'] }
   - { role: ahoy, tags: ['ahoy'] }
   - { role: docker, tags: ['docker'] }
   - { role: hashicorp, tags: ['hashicorp'] }
-  - { role: bluetooth, tags: ['bluetooth'] }
-  - { role: sound, tags: ['sound'] }
-
-    # - role: ./roles/system
-    #   tags: ['system']
+  # - { role: bluetooth, tags: ['bluetooth'] }
+  # - { role: sound, tags: ['sound'] }
 
   vars_prompt:
     - name: user_password
