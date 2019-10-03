@@ -19,6 +19,9 @@ base_packages:
   - unzip
   - arc-gtk-theme
   - arc-icon-theme
+  - php
+  - composer
+
 aur:
   dir: aur
   packages:
