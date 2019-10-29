@@ -21,6 +21,7 @@ base_packages:
   - arc-icon-theme
   - php
   - composer
+  - filezilla
 
 aur:
   dir: aur
