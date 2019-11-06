@@ -19,6 +19,7 @@ base_packages:
   - unzip
   - arc-gtk-theme
   - arc-icon-theme
+  - noto-fonts-emoji
   - php
   - composer
   - filezilla
